@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "5b715578-5dd6-421d-9caf-54dab5ebb798",
+		"name": "bitcoin saving app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26447472"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\":\"lassan\",\n  \"password\": \"mishra\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://bitcoin-saving-backend.onrender.com/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\":\"lassan\",\n  \"password\": \"mishra\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://bitcoin-saving-backend.onrender.com/login"
+			},
+			"response": []
+		},
+		{
+			"name": "add spending",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiZ3VsbHUxMiIsImlhdCI6MTcwMzI1OTk5MH0.3ttRdwxlAQ3eKUpx5owZs4TgwEYFMxz0fDHpRt9EwaI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"dolly\",\n    \"amount\": \"6500\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://bitcoin-saving-backend.onrender.com/addExpense"
+			},
+			"response": []
+		},
+		{
+			"name": "get spendings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiZ3VsbHUxMiIsImlhdCI6MTcwMzI1OTk5MH0.3ttRdwxlAQ3eKUpx5owZs4TgwEYFMxz0fDHpRt9EwaI",
+						"type": "text"
+					}
+				],
+				"url": "https://bitcoin-saving-backend.onrender.com/getExpenses"
+			},
+			"response": []
+		},
+		{
+			"name": "delete spending",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiZ3VsbHUxMiIsImlhdCI6MTcwMzI1OTk5MH0.3ttRdwxlAQ3eKUpx5owZs4TgwEYFMxz0fDHpRt9EwaI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://bitcoin-saving-backend.onrender.com/removeExpense/13",
+					"protocol": "https",
+					"host": [
+						"bitcoin-saving-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"removeExpense",
+						"13"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update spending",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiZ3VsbHUxMiIsImlhdCI6MTcwMzI1OTk5MH0.3ttRdwxlAQ3eKUpx5owZs4TgwEYFMxz0fDHpRt9EwaI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://bitcoin-saving-backend.onrender.com/updateExpense/13"
+			},
+			"response": []
+		}
+	]
+}
